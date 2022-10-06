@@ -1,0 +1,15 @@
+.dropdown-btn {
+  width: 300px;
+  height: 44px;
+  position: relative;
+  &__icon {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+  }
+}
+
+.dropdown-custom {
+  display: flex !important;
+  justify-content: space-between;
+}

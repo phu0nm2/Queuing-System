@@ -74,7 +74,6 @@ const items: MenuItem[] = [
 
 const Home: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-
   return (
     <>
       <Layout style={{ minHeight: '100vh' }}>
