@@ -2,8 +2,8 @@ import React from "react";
 
 import { Tabs } from "antd";
 // import LogoAlta from "../../components/LogoAlta";
-import dashboardIcon from "../../shared/assests/imgs/dashboardIcon.png";
-import monitor from "../../shared/assests/imgs/monitor.png";
+// import dashboardIcon from "../../shared/assests/imgs/dashboardIcon.png";
+import monitor from "../../shared/assests/imgs/monitor.svg";
 
 import "./styles.scss";
 import Devices from "../Devices";
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
     {
       label: (
         <span>
-          <img src={dashboardIcon} alt="dashboard-icon" />
+          {/* <img src={dashboardIcon} alt="dashboard-icon" /> */}
           Dashboard
         </span>
       ),

@@ -4,10 +4,12 @@ import { Breadcrumb } from "antd";
 import "./styles.scss";
 
 const BreadCrumb: React.FC = () => (
-  <Breadcrumb>
-    <Breadcrumb.Item>Thiết bị</Breadcrumb.Item>
+  <>
+    <div className="breadcrumb">
+      <Breadcrumb>
+        <Breadcrumb.Item className="breadcrumb-title">Thiết bị</Breadcrumb.Item>
 
-    {/* <Breadcrumb.Item>
+        {/* <Breadcrumb.Item>
       <a href="">Application Center</a>
     </Breadcrumb.Item>
 
@@ -16,6 +18,8 @@ const BreadCrumb: React.FC = () => (
     </Breadcrumb.Item>
 
     <Breadcrumb.Item>An Application</Breadcrumb.Item> */}
-  </Breadcrumb>
+      </Breadcrumb>
+    </div>
+  </>
 );
 export default BreadCrumb;

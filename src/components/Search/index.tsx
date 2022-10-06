@@ -1,21 +1,23 @@
 import React from "react";
 
-import { Space } from "antd";
+import { Input } from "antd";
+import searchIcon from "../../shared/assests/imgs/searchIcon.svg";
 
-const Search: React.FC = () => {
+import "./styles.scss";
+const SearchCoponent: React.FC = () => {
   const handleSearch = (value: string) => console.log(value);
 
   return (
     <>
-      <Space direction="vertical">
-        {/* <Search
-          placeholder="input search text"
-          onSearch={handleSearch}
-          style={{ width: 200 }}
-        /> */}
-      </Space>
+      <div className="search">
+        <Input placeholder="Nhập từ khóa" className="search-input" />
+
+        <div className="search-icon">
+          <img src={searchIcon} alt="search-icon" />
+        </div>
+      </div>
     </>
   );
 };
 
-export default Search;
+export default SearchCoponent;

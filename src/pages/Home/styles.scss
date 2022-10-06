@@ -1,4 +1,8 @@
 .homepage {
+  width: 1440px;
+  height: 810px;
+  border-radius: 16px;
+  background-color: #f7f7f7;
   .monitor {
     display: flex;
     width: 176px;
@@ -19,7 +23,7 @@
     }
 
     &-text {
-      color: var(--text-color);
+      color: var(--text-color-gray-300);
       font-weight: var(--font-weight-600);
       font-size: var(--text-font-size);
       line-height: calc(24 / 16);
@@ -32,11 +36,9 @@
   height: 48px;
 }
 
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  background-color: var(--background-orange-active);
+.ant-tabs-tab.ant-tabs-tab-active {
+  background-color: var(--background-orange-500);
   .monitor {
-    img {
-    }
     &-text {
       color: #ffffff;
       font-weight: var(--font-weight-700);

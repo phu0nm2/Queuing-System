@@ -3,6 +3,8 @@ import React from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Menu, Space, message } from "antd";
 import type { MenuProps } from "antd";
+import downIcon from "../../shared/assests/imgs/downIcon.svg";
+import "./styles.scss";
 
 const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
   message.info("Click on left button.");
@@ -39,10 +41,12 @@ const DropdownComponent = () => {
     <>
       <Space wrap>
         <Dropdown overlay={menu}>
-          <Button>
-            <Space>
+          <Button className="dropdown-btn">
+            <Space className="dropdown-custom">
               Tất cả
-              <DownOutlined />
+              <div className="dropdown-btn__icon">
+                <img src={downIcon} alt="downIcon" />
+              </div>
             </Space>
           </Button>
         </Dropdown>
