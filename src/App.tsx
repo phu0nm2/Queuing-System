@@ -1,16 +1,18 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
+import Sidebar from "./pages/components/Sidebar";
+import Routers from "./router/route";
+import "./app.scss";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="signin" element={<SignIn />} />
-      </Routes>
+      <div className="app">
+        <Sidebar />
+
+        <Routers />
+      </div>
     </BrowserRouter>
   );
 };

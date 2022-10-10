@@ -2,14 +2,21 @@ import React from "react";
 
 import { Breadcrumb } from "antd";
 import "./styles.scss";
+import { useMatches } from "react-router-dom";
 
-const BreadCrumb: React.FC = () => (
-  <>
-    <div className="breadcrumb">
-      <Breadcrumb>
-        <Breadcrumb.Item className="breadcrumb-title">Thiết bị</Breadcrumb.Item>
+const BreadCrumb: React.FC = () => {
+  // let matches = useMatches();
+  // let crumbs = matches.filter((match)=>Boolean(match.handle?.crumb)).map((match)=>match.handle?.crumb(match.data));
 
-        {/* <Breadcrumb.Item>
+  return (
+    <>
+      <div className="breadcrumb">
+        <Breadcrumb>
+          <Breadcrumb.Item className="breadcrumb-title">
+            Thiết bị
+          </Breadcrumb.Item>
+
+          {/* <Breadcrumb.Item>
       <a href="">Application Center</a>
     </Breadcrumb.Item>
 
@@ -18,8 +25,9 @@ const BreadCrumb: React.FC = () => (
     </Breadcrumb.Item>
 
     <Breadcrumb.Item>An Application</Breadcrumb.Item> */}
-      </Breadcrumb>
-    </div>
-  </>
-);
+        </Breadcrumb>
+      </div>
+    </>
+  );
+};
 export default BreadCrumb;
