@@ -1,16 +1,27 @@
-import React from "react";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
+import { Fragment } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { publicRoutes } from './routes';
+import DefaultLayout from './layouts/DefaultLayout';
+import { Layout } from 'antd';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="signin" element={<SignIn />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          {publicRoutes?.map((route: any, index) => {
+            let Layout: any = DefaultLayout;
+            if (route.layout) {
+              Layout = route.layout;
+            } else if (route.layout === null) {
+              Layout = Fragment;
+            }
+            return (
+              <Route key={index} path={route.path} element={<Layout>{route.component}</Layout>} />
+            );
+          })}
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 };
