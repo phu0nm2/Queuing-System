@@ -6,6 +6,8 @@ import Home from "../pages/Home";
 import Setting from "../pages/components/Setting";
 import Sevices from "../pages/components/Services";
 import GiveNumber from "../pages/components/GiveNumber";
+import AddDevice from "../pages/components/Devices/AddDevice";
+import Detail from "../pages/components/Devices/Detail";
 
 const Routers = () => {
   return (
@@ -17,7 +19,11 @@ const Routers = () => {
       <Route path="/" element={<Home />} />
       <Route path="/" element={<Navigate replace to="home" />} />
       <Route path="dashboard" element={<Dashboard />} />
-      <Route path="thietbi" element={<Devices />} />
+      <Route path="/thietbi" element={<Devices />} />
+
+      <Route path="/thietbi/add" element={<AddDevice />} />
+      <Route path="/thietbi/detail" element={<Detail />} />
+
       <Route path="dichvu" element={<Sevices />} />
       <Route path="capso" element={<GiveNumber />} />
       <Route path="baocao" element={<Report />} />

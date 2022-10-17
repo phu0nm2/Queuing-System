@@ -9,9 +9,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <Sidebar />
+        <div className="sidebar--wrapper">
+          <Sidebar />
+        </div>
 
-        <Routers />
+        <div className="content--wrapper">
+          <Routers />
+        </div>
       </div>
     </BrowserRouter>
   );

@@ -206,7 +206,7 @@ const Devices: React.FC = () => {
             pagination={paginationConfig}
           />
 
-          <Link to="/thietbi/:add" className="device--add__item">
+          <Link to="/thietbi/add" className="device--add__btn">
             <img src={icons.addIcon} alt="addDevice" />
             <h4>Thêm thiết bị</h4>
           </Link>
