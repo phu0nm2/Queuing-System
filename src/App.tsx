@@ -4,6 +4,13 @@ import { publicRoutes } from './routes';
 import DefaultLayout from './layouts/DefaultLayout';
 import { Layout } from 'antd';
 
+// import React from "react";
+// import { BrowserRouter } from "react-router-dom";
+
+// import Sidebar from "./pages/components/Sidebar";
+// import Routers from "./router/route";
+// import "./app.scss";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,6 +29,16 @@ const App = () => {
           })}
         </Routes>
       </Layout>
+
+      {/* <div className="app">
+         <div className="sidebar--wrapper">
+           <Sidebar />
+         </div>
+
+         <div className="content--wrapper">
+           <Routers />
+         </div>
+       </div> */}
     </BrowserRouter>
   );
 };

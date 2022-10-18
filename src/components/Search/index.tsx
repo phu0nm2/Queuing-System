@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Input } from "antd";
-import searchIcon from "../../shared/assests/imgs/searchIcon.svg";
+import icons from "../../shared/assests/icons";
 
 import "./styles.scss";
 const SearchCoponent: React.FC = () => {
@@ -13,7 +13,7 @@ const SearchCoponent: React.FC = () => {
         <Input placeholder="Nhập từ khóa" className="search-input" />
 
         <div className="search-icon">
-          <img src={searchIcon} alt="search-icon" />
+          <img src={icons.searchIcon} alt="search-icon" />
         </div>
       </div>
     </>

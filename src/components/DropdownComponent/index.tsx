@@ -3,7 +3,7 @@ import React from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Menu, Space, message } from "antd";
 import type { MenuProps } from "antd";
-import downIcon from "../../shared/assests/imgs/downIcon.svg";
+import icons from "../../shared/assests/icons";
 import "./styles.scss";
 
 const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -45,7 +45,7 @@ const DropdownComponent = () => {
             <Space className="dropdown-custom">
               Tất cả
               <div className="dropdown-btn__icon">
-                <img src={downIcon} alt="downIcon" />
+                <img src={icons.downIcon} alt="downIcon" />
               </div>
             </Space>
           </Button>

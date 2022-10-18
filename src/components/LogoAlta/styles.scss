@@ -1,9 +1,14 @@
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px 0;
-}
-.logo img {
-  width: 80px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 25px 0;
+  // }
+  // .logo img {
+  //   width: 80px;
+
+  img {
+    width: 80px;
+    height: 64px;
+  }
 }
