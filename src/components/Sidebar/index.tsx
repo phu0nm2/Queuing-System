@@ -98,7 +98,9 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <Sider collapsible style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
-        <LogoAlta />
+        <div className="logo">
+          <LogoAlta />
+        </div>
         <Menu
           onClick={handleNavigate}
           theme="light"
