@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import BreadCrumb from "../../../../components/BreadCrumb";
-import icons from "../../../../shared/assests/icons";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import BreadCrumb from '../../../../components/BreadCrumb';
+import icons from '../../../../shared/assests/icons';
 
-import "./styles.scss";
+import './styles.scss';
 
 const Detail = () => {
   return (
@@ -14,9 +14,9 @@ const Detail = () => {
           <h2>Quản lý thiết bị</h2>
         </div>
 
-        <div style={{ display: "flex", width: "100%" }}>
+        <div style={{ display: 'flex', width: '100%' }}>
           <div className="device--detail__wrapper">
-            <div style={{ marginLeft: "24px", paddingTop: "16px" }}>
+            <div style={{ marginLeft: '24px', paddingTop: '16px' }}>
               <div className="device--detail__title">
                 <h3>Thông tin thiết bị</h3>
               </div>
@@ -54,14 +54,14 @@ const Detail = () => {
               <div className="device--detail__description">
                 <h3>Dịch vụ sử dụng:</h3>
                 <p>
-                  Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám
-                  tai mũi họng, Khám hô hấp, Khám tổng quát.
+                  Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô
+                  hấp, Khám tổng quát.
                 </p>
               </div>
             </div>
           </div>
 
-          <Link to="/thietbi/update/:id" className="device--detail--add__btn">
+          <Link to="/thietbi/update/:id" className="device--detail--update__btn">
             <img src={icons.addIcon} alt="updateIcon" />
             <h4>Cập nhật thiết bị</h4>
           </Link>

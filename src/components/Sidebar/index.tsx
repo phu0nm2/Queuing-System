@@ -36,7 +36,7 @@ const items: MenuItem[] = [
   getItem(
     'Thiết bị',
     '2',
-    '/device',
+    '/thietbi',
 
     <img className="icon icon-sidebar" src={icons.desktopIcon} alt="icon device" />,
   ),
@@ -119,6 +119,8 @@ const Sidebar: React.FC = () => {
             background: '#FFF2E7',
             top: '130px',
             border: 'unset',
+            marginTop: '276px',
+            marginBottom: '30px',
           }}
         >
           <img className="icon icon-logout" src={icons.logoutIcon} alt="Icon logout" />

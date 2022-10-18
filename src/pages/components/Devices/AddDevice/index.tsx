@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { Button, Form, Input, Select } from "antd";
-import icons from "../../../../shared/assests/icons";
-import BreadCrumb from "../../../../components/BreadCrumb";
-import "./styles.scss";
+import { Button, Form, Input, Select } from 'antd';
+import icons from '../../../../shared/assests/icons';
+import BreadCrumb from '../../../../components/BreadCrumb';
+import './styles.scss';
 
 const AddDevice = () => {
   const onFinish = (values: any) => {
-    console.log("Success:", values);
+    console.log('Success:', values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
 
   return (
@@ -29,7 +29,7 @@ const AddDevice = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
-          <div style={{ marginLeft: "24px", paddingTop: "16px" }}>
+          <div style={{ marginLeft: '24px', paddingTop: '16px' }}>
             <div className="device--group__title">
               <h3>Thông tin thiết bị</h3>
             </div>
@@ -40,59 +40,38 @@ const AddDevice = () => {
                   className="form--group__item"
                   label="Mã thiết bị: "
                   name="deviceId"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập mã thiết bị!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập mã thiết bị!' }]}
                 >
-                  <Input
-                    className="form--group__input"
-                    placeholder="Nhập mã thiết bị"
-                  />
+                  <Input className="form--group__input" placeholder="Nhập mã thiết bị" />
                 </Form.Item>
 
                 <Form.Item
                   className="form--group__item"
                   label="Tên thiết bị:"
                   name="deviceName"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập tên thiết bị!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập tên thiết bị!' }]}
                 >
-                  <Input
-                    className="form--group__input"
-                    placeholder="Nhập tên thiết bị"
-                  />
+                  <Input className="form--group__input" placeholder="Nhập tên thiết bị" />
                 </Form.Item>
 
                 <Form.Item
                   className="form--group__item"
                   label="Địa chỉ IP:"
                   name="IPaddress"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập địa chỉ IP!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập địa chỉ IP!' }]}
                 >
-                  <Input
-                    className="form--group__input"
-                    placeholder="Nhập địa chỉ IP"
-                  />
+                  <Input className="form--group__input" placeholder="Nhập địa chỉ IP" />
                 </Form.Item>
               </div>
 
               <div className="form--group__items form--group__select">
-                <img
-                  className="form--group__select--img"
-                  src={icons.downIcon}
-                  alt="dropdownIcon"
-                />
+                <img className="form--group__select--img" src={icons.downIcon} alt="dropdownIcon" />
 
                 <Form.Item
                   className="form--group__item "
                   label="Loại thiết bị:"
                   name="deviceType"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập loại thiết bị!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập loại thiết bị!' }]}
                 >
                   <Select
                     showArrow={false}
@@ -100,9 +79,7 @@ const AddDevice = () => {
                     placeholder="Chọn loại thiết bị"
                   >
                     <Select.Option value="Kiosk">Kiosk</Select.Option>
-                    {/* <Select.Option value="Display counter">
-                      Display counter
-                    </Select.Option> */}
+                    <Select.Option value="Display counter">Display counter</Select.Option>
                   </Select>
                 </Form.Item>
 
@@ -110,28 +87,18 @@ const AddDevice = () => {
                   className="form--group__item"
                   label="Tên đăng nhập:"
                   name="username"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập tên đăng nhập!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập tên đăng nhập!' }]}
                 >
-                  <Input
-                    className="form--group__input"
-                    placeholder="Nhập tài khoản"
-                  />
+                  <Input className="form--group__input" placeholder="Nhập tài khoản" />
                 </Form.Item>
 
                 <Form.Item
                   className="form--group__item"
                   label="Mật khẩu:"
                   name="password"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập mật khẩu!" },
-                  ]}
+                  rules={[{ required: true, message: 'Vui lòng nhập mật khẩu!' }]}
                 >
-                  <Input
-                    placeholder="Nhập mật khẩu"
-                    className="form--group__input"
-                  />
+                  <Input placeholder="Nhập mật khẩu" className="form--group__input" />
                 </Form.Item>
               </div>
             </div>
@@ -140,27 +107,16 @@ const AddDevice = () => {
               className="form--group__item"
               label="Dịch vụ sử dụng:"
               name="services"
-              rules={[
-                { required: true, message: "Vui lòng nhập dịch vụ sử dụng:!" },
-              ]}
+              rules={[{ required: true, message: 'Vui lòng nhập dịch vụ sử dụng:!' }]}
             >
-              <Input
-                className="form--group__service"
-                placeholder="Nhập dịch vụ sử dụng"
-              />
+              <Input className="form--group__service" placeholder="Nhập dịch vụ sử dụng" />
             </Form.Item>
 
-            <div className="form--group__description">
-              Là trường thông tin bắt buộc
-            </div>
+            <div className="form--group__description">Là trường thông tin bắt buộc</div>
 
             <div className="form--group__btn">
               <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button
-                  className="form--group__btn--default btn--outline"
-                  type="primary"
-                  htmlType="submit"
-                >
+                <Button className="form--group__btn--default btn--outline" type="primary">
                   Hủy bỏ
                 </Button>
               </Form.Item>

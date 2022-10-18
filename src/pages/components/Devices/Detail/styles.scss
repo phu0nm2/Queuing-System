@@ -10,7 +10,6 @@
     height: 604px;
     background: var(--background-white);
     margin-top: 16px;
-    // margin-left: 24px;
   }
 
   h2 {
@@ -62,12 +61,12 @@
     }
   }
 
-  &--add__btn {
+  &--update__btn {
     //
     width: 80px;
     height: 94px;
     text-align: center;
-    padding: 12px, 4px, 12px, 4px;
+    padding: 12px 4px 12px 4px;
     background-color: var(--background-orange-50);
 
     margin-left: 14px;

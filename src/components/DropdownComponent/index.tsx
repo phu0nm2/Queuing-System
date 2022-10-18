@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import { DownOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Menu, Space, message } from "antd";
-import type { MenuProps } from "antd";
-import icons from "../../shared/assests/icons";
-import "./styles.scss";
+// import { DownOutlined } from "@ant-design/icons";
+import { Button, Dropdown, Menu, Space, message } from 'antd';
+import type { MenuProps } from 'antd';
+import icons from '../../shared/assests/icons';
+import './styles.scss';
 
 const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  message.info("Click on left button.");
-  console.log("click left button", e);
+  message.info('Click on left button.');
+  console.log('click left button', e);
 };
 
-const handleMenuClick: MenuProps["onClick"] = (e) => {
+const handleMenuClick: MenuProps['onClick'] = e => {
   // message.info("Click on menu item.");
-  console.log("click", e);
+  console.log('click', e);
 };
 
 const menu = (
@@ -21,16 +21,16 @@ const menu = (
     onClick={handleMenuClick}
     items={[
       {
-        label: "Tất cả",
-        key: "1",
+        label: 'Tất cả',
+        key: '1',
       },
       {
-        label: "Hoạt động",
-        key: "2",
+        label: 'Hoạt động',
+        key: '2',
       },
       {
-        label: "Ngưng hoạt động",
-        key: "3",
+        label: 'Ngưng hoạt động',
+        key: '3',
       },
     ]}
   />
