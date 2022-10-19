@@ -1,13 +1,12 @@
 import Home from '../pages/Home';
-// import Device from '../pages/Device';
 // import SignIn from '../pages/SignIn';
 import { RoleManagement, AccountManagement, LogUser } from '../pages/Setting';
 import Report from '../pages/Report';
 import GiveNumber from '../pages/GiveNumber';
 import Service from '../pages/Service';
-import AddDevice from '../pages/components/Devices/AddDevice';
-import Detail from '../pages/components/Devices/Detail';
-import Devices from '../pages/components/Devices';
+import AddDevice from '../pages/Devices/AddDevice';
+import Detail from '../pages/Devices/Detail';
+import Devices from '../pages/Devices';
 
 const publicRoutes = [
   // { path: '/signin', component: <SignIn />, layout: null },

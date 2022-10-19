@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Space, Table, Tag } from 'antd';
+import { Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 
 import { Link } from 'react-router-dom';
 
-import BreadCrumb from '../../../components/BreadCrumb';
-import DropdownComponent from '../../../components/DropdownComponent';
-import SearchCoponent from '../../../components/Search';
+import BreadCrumb from '../../components/BreadCrumb';
+import DropdownComponent from '../../components/DropdownComponent';
+import SearchCoponent from '../../components/Search';
 
 import './styles.scss';
-import icons from '../../../shared/assests/icons';
+import icons from '../../shared/assests/icons';
 
 interface DataType {
   key: string;

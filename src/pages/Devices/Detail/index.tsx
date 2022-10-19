@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BreadCrumb from '../../../../components/BreadCrumb';
-import icons from '../../../../shared/assests/icons';
+import BreadCrumb from '../../../components/BreadCrumb';
+import icons from '../../../shared/assests/icons';
 
 import './styles.scss';
 

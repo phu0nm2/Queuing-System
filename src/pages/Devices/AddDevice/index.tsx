@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Button, Form, Input, Select } from 'antd';
-import icons from '../../../../shared/assests/icons';
-import BreadCrumb from '../../../../components/BreadCrumb';
+import icons from '../../../shared/assests/icons';
+import BreadCrumb from '../../../components/BreadCrumb';
 import './styles.scss';
 
 const AddDevice = () => {
