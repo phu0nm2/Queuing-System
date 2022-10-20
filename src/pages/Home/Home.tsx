@@ -1,10 +1,12 @@
-import { Col, Row } from 'antd';
+import { Select, Col, Row } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { Area } from '@ant-design/plots';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './styles.scss';
 import icons from '../../shared/assests/icons';
+
+const { Option } = Select;
 
 const Home: React.FC = () => {
   const [data, setData] = useState([]);
@@ -32,6 +34,7 @@ const Home: React.FC = () => {
         fill: 'l(270) 0:#ffffff 0.5:#7ec2f3 1:#1890ff',
       };
     },
+    smooth: true,
   };
   return (
     <Row className="dashboard">
@@ -50,7 +53,7 @@ const Home: React.FC = () => {
                 Số thứ tự đã cấp
               </p>
             </Row>
-            <Row className="statistical__item row-data">
+            <Row className="statistical__item-row-2 row-data">
               <div className="" style={{ fontWeight: '700', fontSize: '30px' }}>
                 4.221
               </div>
@@ -82,7 +85,7 @@ const Home: React.FC = () => {
                 Số thứ tự đã sử dụng
               </p>
             </Row>
-            <Row className="statistical__item row-data">
+            <Row className="statistical__item-row-2 row-data">
               <div className="" style={{ fontWeight: '700', fontSize: '30px' }}>
                 3.721
               </div>
@@ -114,7 +117,7 @@ const Home: React.FC = () => {
                 Số thứ tự đang chờ
               </p>
             </Row>
-            <Row className="statistical__item row-data">
+            <Row className="statistical__item-row-2 row-data">
               <div className="" style={{ fontWeight: '700', fontSize: '30px' }}>
                 468
               </div>
@@ -146,7 +149,7 @@ const Home: React.FC = () => {
                 Số thứ tự đã bỏ qua
               </p>
             </Row>
-            <Row className="statistical__item row-data">
+            <Row className="statistical__item-row-2 row-data">
               <div className="" style={{ fontWeight: '700', fontSize: '30px' }}>
                 32
               </div>
@@ -168,12 +171,25 @@ const Home: React.FC = () => {
           </Col>
         </Row>
         <div className="dashboard__left-area">
+          <div className="area__header">
+            <div className="area__header-item-1">
+              <p>Bảng thống kê theo ngày</p>
+              <p>Tháng 11/2021</p>
+            </div>
+            <div className="area__header-item-2">
+              <p>Xem theo</p>
+              <Select defaultValue="day" style={{ width: 106 }}>
+                <Option value="day">Ngày</Option>
+                <Option value="week">Tuần</Option>
+                <Option value="month">Tháng</Option>
+              </Select>
+            </div>
+          </div>
           <Area
             {...config}
             style={{
               borderRadius: '10px',
               padding: '10px',
-              boxShadow: '5px 8px 24px 5px rgba(208, 216, 243, 0.6)',
             }}
           />
         </div>
@@ -213,7 +229,7 @@ const Home: React.FC = () => {
               Thiết bị
             </div>
           </Col>
-          <Col>
+          <Col className="element__item-3">
             <p style={{ fontSize: '12px' }}>
               <img src={icons.dotYellowIcon} alt="" style={{ marginRight: '3px' }} />
               Đang hoạt động{' '}
@@ -250,16 +266,11 @@ const Home: React.FC = () => {
               276
             </p>
             <div style={{ fontSize: '14px', color: '#4277FF' }}>
-              <img
-                className="icon-circle"
-                src={icons.serviceIcon}
-                alt=""
-                style={{ marginRight: '5px' }}
-              />
+              <img src={icons.serviceIcon} alt="" style={{ marginRight: '5px' }} />
               Dịch vụ
             </div>
           </Col>
-          <Col>
+          <Col className="element__item-3">
             <p style={{ fontSize: '12px' }}>
               <img src={icons.dotYellowIcon} alt="" style={{ marginRight: '3px' }} />
               Đang hoạt động{' '}
@@ -296,24 +307,24 @@ const Home: React.FC = () => {
               4221
             </p>
             <div style={{ fontSize: '14px', color: '#35C75A' }}>
-              <img
-                className="icon-circle"
-                src={icons.numberLevelIcon}
-                alt=""
-                style={{ marginRight: '5px' }}
-              />
+              <img src={icons.numberLevelIcon} alt="" style={{ marginRight: '5px' }} />
               Cấp số
             </div>
           </Col>
-          <Col>
+          <Col className="element__item-3">
             <p style={{ fontSize: '12px' }}>
               <img src={icons.dotYellowIcon} alt="" style={{ marginRight: '3px' }} />
-              Đang hoạt động{' '}
+              Đã sử dụng{' '}
               <span style={{ color: '#35C75A', fontSize: '14px', fontWeight: '700' }}>3.799</span>
             </p>
             <p style={{ fontSize: '12px' }}>
               <img src={icons.dotGrayIcon} alt="" style={{ marginRight: '3px' }} />
-              Ngưng hoạt động{' '}
+              Đang chờ{' '}
+              <span style={{ color: '#35C75A', fontSize: '14px', fontWeight: '700' }}>422</span>
+            </p>
+            <p style={{ fontSize: '12px' }}>
+              <img src={icons.dotGrayIcon} alt="" style={{ marginRight: '3px' }} />
+              Bỏ qua{' '}
               <span style={{ color: '#35C75A', fontSize: '14px', fontWeight: '700' }}>422</span>
             </p>
           </Col>
