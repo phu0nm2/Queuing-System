@@ -1,5 +1,9 @@
-/*  */
+/* antd css */
+@import '~antd/dist/antd.css';
+/* font*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/*scss file*/
+@import url('./app.scss');
 
 * {
   box-sizing: border-box;
@@ -23,4 +27,6 @@ body {
   --background-orange-500: #ff7506;
   --background-orange-400: #ff9138;
   --background-orange-50: #fff2e7;
+  --background-white: #ffffff;
+  --main-font: 'Nunito', sans-serif;
 }

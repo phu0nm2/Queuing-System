@@ -5,6 +5,7 @@ import LogoAlta from '../LogoAlta';
 import { MenuProps } from 'antd/es/menu';
 import { Button, Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const { Sider } = Layout;
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -97,7 +98,7 @@ const Sidebar: React.FC = () => {
 
   return (
     <>
-      <Sider collapsible style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
+      <Sider style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
         <LogoAlta />
         <Menu
           onClick={handleNavigate}
@@ -107,22 +108,24 @@ const Sidebar: React.FC = () => {
           mode="vertical"
           items={items}
         />
-        <Button
-          style={{
-            color: '#FF7506',
-            width: '176px',
-            height: '48px',
-            borderRadius: '8px',
-            fontWeight: '600',
-            left: '12px',
-            background: '#FFF2E7',
-            top: '130px',
-            border: 'unset',
-          }}
-        >
-          <img className="icon icon-logout" src={icons.logoutIcon} alt="Icon logout" />
-          Đăng xuất
-        </Button>
+        <Link to={'/signin'} style={{ maxHeight: '50px' }}>
+          <Button
+            style={{
+              color: '#FF7506',
+              width: '176px',
+              height: '48px',
+              borderRadius: '8px',
+              fontWeight: '600',
+              left: '12px',
+              background: '#FFF2E7',
+              top: '130px',
+              border: 'unset',
+            }}
+          >
+            <img className="icon icon-logout" src={icons.logoutIcon} alt="Icon logout" />
+            Đăng xuất
+          </Button>
+        </Link>
       </Sider>
     </>
   );
