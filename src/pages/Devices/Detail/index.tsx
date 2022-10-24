@@ -61,7 +61,7 @@ const Detail = () => {
             </div>
           </div>
 
-          <Link to="/thietbi/update/:id" className="device--detail--update__btn">
+          <Link to="/thietbi/update" className="device--detail--update__btn">
             <img src={icons.addIcon} alt="updateIcon" />
             <h4>Cập nhật thiết bị</h4>
           </Link>

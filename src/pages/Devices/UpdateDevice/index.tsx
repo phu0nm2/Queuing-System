@@ -1,14 +1,12 @@
 import React from 'react';
 
-import { Button, Form, Input, Select } from 'antd';
-import { useNavigate } from 'react-router-dom';
-
+import { Button, Form, Input, Select, Tag } from 'antd';
 import icons from '../../../shared/assests/icons';
 import BreadCrumb from '../../../components/BreadCrumb';
-
+import { useNavigate } from 'react-router-dom';
 import './styles.scss';
 
-const AddDevice = () => {
+const UpdateDevice = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -24,15 +22,20 @@ const AddDevice = () => {
     form.resetFields();
     navigate('/thietbi');
   };
+
+  const log = (e: React.MouseEvent<HTMLElement>) => {
+    console.log(e);
+  };
+
   return (
     <>
-      <div className="device--group">
+      <div className="device--group__update">
         <BreadCrumb />
         <h2>Quản lý thiết bị</h2>
 
         <Form
           form={form}
-          className="device--group__wrapper"
+          className="device--group__update__wrapper"
           labelCol={{ span: 14 }}
           wrapperCol={{ span: 20 }}
           initialValues={{ remember: true }}
@@ -40,14 +43,21 @@ const AddDevice = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
-          <div style={{ marginLeft: '24px', paddingTop: '16px' }}>
-            <div className="device--group__title">
+          <div
+            style={{
+              padding: '16px 24px 0',
+              width: '100%',
+              height: '556px',
+            }}
+          >
+            <div className="device--group__update__title">
               <h3>Thông tin thiết bị</h3>
             </div>
 
             <div className="form--group">
               <div className="form--group__items">
                 <Form.Item
+                  shouldUpdate
                   className="form--group__item"
                   label="Mã thiết bị: "
                   name="deviceId"
@@ -120,32 +130,54 @@ const AddDevice = () => {
               name="services"
               rules={[{ required: true, message: 'Vui lòng nhập dịch vụ sử dụng:!' }]}
             >
-              <Input className="form--group__service" placeholder="Nhập dịch vụ sử dụng" />
+              <React.Fragment>
+                <Input className="form--group__service" />
+
+                <div className="form--group__service--tags">
+                  <Tag closable onClose={log}>
+                    Khám tim mạch
+                  </Tag>
+                  <Tag closable onClose={log}>
+                    Khám sản phụ khoa
+                  </Tag>
+                  <Tag closable onClose={log}>
+                    Khám răng hàm mặt
+                  </Tag>
+                  <Tag closable onClose={log}>
+                    Khám tai mũi họng
+                  </Tag>
+                  <Tag closable onClose={log}>
+                    Khám hô hấp
+                  </Tag>
+                  <Tag closable onClose={log}>
+                    Khám tổng quát
+                  </Tag>
+                </div>
+              </React.Fragment>
             </Form.Item>
 
             <div className="form--group__description">Là trường thông tin bắt buộc</div>
+          </div>
 
-            <div className="form--group__btn">
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button
-                  // htmlType="button"
-                  onClick={handleCancel}
-                  className="form--group__btn--default btn--outline"
-                  type="primary"
-                >
-                  Hủy bỏ
-                </Button>
-              </Form.Item>
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button
-                  className="form--group__btn--default btn--normal"
-                  type="primary"
-                  htmlType="submit"
-                >
-                  Thêm thiết bị
-                </Button>
-              </Form.Item>
-            </div>
+          <div className="form--group__btn">
+            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+              <Button
+                onClick={handleCancel}
+                className="form--group__btn--default btn--outline"
+                type="primary"
+              >
+                Hủy bỏ
+              </Button>
+            </Form.Item>
+            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+              <Button
+                className="form--group__btn--default btn--normal"
+                type="primary"
+                htmlType="submit"
+              >
+                Cập nhật
+              </Button>
+            </Form.Item>
           </div>
         </Form>
       </div>
@@ -153,4 +185,4 @@ const AddDevice = () => {
   );
 };
 
-export default AddDevice;
+export default UpdateDevice;

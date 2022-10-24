@@ -1,15 +1,15 @@
-.dropdown-btn {
-  width: 300px;
-  height: 44px;
+.dropdown--services-btn {
+  width: 154px;
+
   position: relative;
   &__icon {
     position: absolute;
-    top: 4px;
+    top: 10px;
     right: 16px;
   }
 }
 
-.dropdown-custom {
+.dropdown--services-custom {
   display: flex !important;
   justify-content: space-between;
 }

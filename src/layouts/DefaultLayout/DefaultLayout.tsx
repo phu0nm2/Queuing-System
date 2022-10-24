@@ -5,7 +5,7 @@ const DefaultLayout = ({ children }: any) => {
   return (
     <>
       <Sidebar />
-      <div>{children}</div>
+      <React.Fragment>{children}</React.Fragment>
     </>
   );
 };

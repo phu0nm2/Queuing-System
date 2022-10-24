@@ -7,6 +7,7 @@ import Service from '../pages/Service';
 import AddDevice from '../pages/Devices/AddDevice';
 import Detail from '../pages/Devices/Detail';
 import Devices from '../pages/Devices';
+import UpdateDevice from '../pages/Devices/UpdateDevice';
 
 const publicRoutes = [
   // { path: '/signin', component: <SignIn />, layout: null },
@@ -14,6 +15,7 @@ const publicRoutes = [
   { path: '/thietbi', component: <Devices /> },
   { path: '/thietbi/add', component: <AddDevice /> },
   { path: '/thietbi/detail', component: <Detail /> },
+  { path: '/thietbi/update', component: <UpdateDevice /> },
   { path: '/service', component: <Service /> },
   { path: '/givenumber', component: <GiveNumber /> },
   { path: '/report', component: <Report /> },
