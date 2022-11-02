@@ -1,6 +1,7 @@
 /*  */
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/*scss file*/
+@import url('./app.scss');
 
 * {
   box-sizing: border-box;
@@ -51,18 +52,8 @@ body {
   --font-weight-400: 400;
   --font-weight-600: 600;
   --font-weight-700: 700;
-
-  --box-shadow-btn: 0px 0px 6px #e7e9f2;
-
-  --border-radius-btn: 8px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+  --background-orange-500: #ff7506;
+  --background-orange-400: #ff9138;
+  --background-orange-50: #fff2e7;
+  --main-font: 'Nunito', sans-serif;
 }
